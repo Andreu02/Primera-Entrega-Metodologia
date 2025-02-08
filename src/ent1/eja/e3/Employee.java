@@ -36,10 +36,11 @@ public class Employee {
         return salary * 12;
     }
     public int raiseSalary(int percent) {
-        return salary + salary * percent / 100;
+        this.salary += this.salary * percent / 100;
+        return this.salary;
     }
     @Override
     public String toString() {
-        return "Employee [id=" + id + ",name=" + firstName + lastName + ", salary=" + salary + "]";
+        return "Employee [id=" + id + ",name=" + firstName +" "+ lastName + ", salary=" + salary + "]";
     }
 }
