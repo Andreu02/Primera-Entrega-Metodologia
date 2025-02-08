@@ -1,26 +1,25 @@
 //Importamos la clase
-import ent1.eja.e3.Employee;
+import ent1.eja.e4.InvoiceItem;
 
 
 public class Main {
     public static void main(String[] args) {
-        ent1_eja_e3();
+        ent1_eja_e4();
     }
-    static public void ent1_eja_e3() {
-        Employee e1 = new Employee(8, "Peter", "Tan", 2500);
-        System.out.println(e1); // toString();
+    static public void ent1_eja_e4() {
+        // Test constructor and toString()
+        InvoiceItem inv1 = new InvoiceItem("A101", "Pen Red", 888, 0.08);
+        System.out.println(inv1); // toString();
 // Test Setters and Getters
-        e1.setSalary(999);
-        System.out.println(e1); // toString();
-        System.out.println("id is: " + e1.getId());
-        System.out.println("firstname is: " + e1.getFirstName());
-        System.out.println("lastname is: " + e1.getLastName());
-        System.out.println("salary is: " + e1.getSalary());
-        System.out.println("name is: " + e1.getName());
-        System.out.println("annual salary is: " + e1.getAnnualSalary()); // Test method
-// Test raiseSalary()
-        System.out.println(e1.raiseSalary(10));
-        System.out.println(e1);
+        inv1.setQty(999);
+        inv1.setUnitPrice(0.99);
+        System.out.println(inv1); // toString();
+        System.out.println("id is: " + inv1.getId());
+        System.out.println("desc is: " + inv1.getDesc());
+        System.out.println("qty is: " + inv1.getQty());
+        System.out.println("unitPrice is: " + inv1.getUnitPrice());
+// Test getTotal()
+        System.out.println("The total is: " + inv1.getTotal());
     }
 }
 
