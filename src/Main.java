@@ -1,46 +1,34 @@
 //Importamos la clase
-import ent1.eja.e8.Ball;
+import ent1.ejb.e1.Author;
+import ent1.ejb.e1.Book;
 
 
 public class Main {
     public static void main(String[] args) {
-        ent1_eja_e8();
+        ent1_ejb_e1();
     }
-    static public void ent1_eja_e8() {
-        // Test constructor and toString()
-        Ball ball = new Ball(1.1f, 2.2f, 10, 3.3f, 4.4f);
-        System.out.println(ball); // toString()
-// Test Setters and Getters
-        ball.setX(80.0f);
-        ball.setY(35.0f);
-        ball.setRadius(5);
-        ball.setxDelta(4.0f);
-        ball.setyDelta(6.0f);
-        System.out.println(ball); // toString()
-        System.out.println("x is: " + ball.getX());
-        System.out.println("y is: " + ball.getY());
-        System.out.println("radius is: " + ball.getRadius());
-        System.out.println("xDelta is: " + ball.getxDelta());
-        System.out.println("yDelta is: " + ball.getyDelta());
-// Bounce the ball within the boundary
-        float xMin = 0.0f;
-        float xMax = 100.0f;
-        float yMin = 0.0f;
-        float yMax = 50.0f;
-        for (int i = 0; i < 15; i++) {
-            ball.move();
-            System.out.println(ball);
-            float xNew = ball.getX();
-            float yNew = ball.getY();
-            int radius = ball.getRadius();
-// Check boundary value to bounce back
-            if ((xNew + radius) > xMax || (xNew - radius) < xMin) {
-                ball.reflectHorizontal();
-            }
-            if ((yNew + radius) > yMax || (yNew - radius) < yMin) {
-                ball.reflectVertical();
-            }
-        }
+    static public void ent1_ejb_e1() {
+        // Test Author class
+        Author a1 = new Author("Tan Ah Teck", "ahteck@nowhere.com");
+        System.out.println(a1);
+        a1.setEmail("ahteck@somewhere.com");
+        System.out.println(a1);
+        System.out.println("name is: " + a1.getName());
+        System.out.println("email is: " + a1.getEmail());
+// Test Book class
+        Book b1 = new Book("12345", "Java for dummies", a1, 8.8, 88);
+        System.out.println(b1);
+        b1.setPrice(9.9);
+        b1.setQty(99);
+        System.out.println(b1);
+        System.out.println("isbn is: " + b1.getIsbn());
+        System.out.println("name is: " + b1.getName());
+        System.out.println("price is: " + b1.getPrice());
+        System.out.println("qty is: " + b1.getQty());
+        System.out.println("author is: " + b1.getAuthor()); // Author's toString()
+        System.out.println("author's name: " + b1.getAuthorName());
+        System.out.println("author's name: " + b1.getAuthor().getName());
+        System.out.println("author's email: " + b1.getAuthor().getEmail());
 
     }
 }
