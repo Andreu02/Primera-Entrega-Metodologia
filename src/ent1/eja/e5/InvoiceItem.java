@@ -1,4 +1,4 @@
-package ent1.eja.e4;
+package ent1.eja.e5;
 
 public class InvoiceItem {
     //ZONA DE ATRIBUTOS
@@ -8,12 +8,15 @@ public class InvoiceItem {
     private double unitPrice;
 
     //ZONA DE METODOS
+        //constructores
     public InvoiceItem(String id, String desc, int qty, double unitPrice) {
         this.id = id;
         this.desc = desc;
         this.qty = qty;
         this.unitPrice = unitPrice;
     }
+
+        //getters y setters
     public String getId() {
         return id;
     }
@@ -32,6 +35,8 @@ public class InvoiceItem {
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
+
+        //otros
     public double getTotal(){
         return qty * unitPrice;
     }

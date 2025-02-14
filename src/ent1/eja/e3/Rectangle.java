@@ -1,4 +1,4 @@
-package ent1.eja.e2;
+package ent1.eja.e3;
 
 public class Rectangle {
     //ZONA DE ATRIBUTOS
@@ -6,12 +6,15 @@ public class Rectangle {
     private float width = 1.0f;
 
     //ZONA DE METODOS
+        //constructores
     public Rectangle() {
     }
     public Rectangle(float length, float width) {
         this.length = length;
         this.width = width;
     }
+
+        //getters y setters
     public float getLength() {
         return length;
     }
@@ -24,6 +27,8 @@ public class Rectangle {
     public void setWidth(float width) {
         this.width = width;
     }
+
+        //otros
     public double getArea(){
         return length * width;
     }

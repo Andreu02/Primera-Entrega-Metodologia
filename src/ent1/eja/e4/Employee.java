@@ -1,4 +1,4 @@
-package ent1.eja.e3;
+package ent1.eja.e4;
 
 public class Employee {
     //ZONA DE ATRIBUTOS
@@ -8,12 +8,15 @@ public class Employee {
     private int salary;
 
     //ZONA DE METODOS
-    public Employee (int id, String firstName, String lastName, int salary) {
+        //constructores
+    public Employee(int id, String firstName, String lastName, int salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.salary = salary;
     }
+
+        //getters y setters
     public int getId() {
         return id;
     }
@@ -32,6 +35,8 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+        //otros
     public int getAnnualSalary() {
         return salary * 12;
     }

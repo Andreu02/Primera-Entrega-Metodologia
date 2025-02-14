@@ -1,23 +1,26 @@
-package ent1.eja.e1;
+package ent1.eja.e2;
 
 public class Circle {
     // ZONA DE ATRIBUTOS
     private double radius = 1.0d;
 
     //ZONA DE METODOS
+        //constructores
     public Circle() {
     }
-
-    public Circle (double ratio) {
+    public Circle(double ratio) {
         this.radius = ratio;
     }
 
+        //getters y setters
     public double getRadius(){
         return radius;
     }
     public void setRadius(double ratio){
         this.radius = ratio;
     }
+
+        //otros
     public double getArea(){
         return Math.PI * radius * radius;
     }

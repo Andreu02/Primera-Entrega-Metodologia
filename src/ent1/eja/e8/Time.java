@@ -1,4 +1,4 @@
-package ent1.eja.e7;
+package ent1.eja.e8;
 
 public class Time {
     //ZONA DE ATRIBUTOS
@@ -7,11 +7,14 @@ public class Time {
     private int second;
 
     //ZONA DE METODOS
+        //constructores
     public Time(int hour, int minute, int second) {
         this.hour = hour;
         this.minute = minute;
         this.second = second;
     }
+
+        //getters y setters
     public int getHour() {
         return hour;
     }
@@ -30,6 +33,8 @@ public class Time {
     public void setSecond(int second) {
         this.second = second;
     }
+
+        //otros
     public void setTime(int hour, int minute, int second) {
         setHour(hour);
         setMinute(minute);

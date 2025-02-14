@@ -1,4 +1,4 @@
-package ent1.eja.e5;
+package ent1.eja.e6;
 
 public class Account {
     //ZONA DE ATRIBUTOS
@@ -7,25 +7,29 @@ public class Account {
     private int balance = 0;
 
     //ZONA DE METODOS
-    public Account( String id, String name) {
+        //constructores
+    public Account(String id, String name) {
         this.id = id;
         this.name = name;
     }
-    public Account( String id, String name, int balance) {
+    public Account(String id, String name, int balance) {
         this.id = id;
         this.name = name;
         this.balance = balance;
     }
+
+        //getters y setters
     public String getId() {
         return id;
     }
-
     public String getName() {
         return name;
     }
     public int getBalance() {
         return balance;
     }
+
+        //otros
     public int credit(int amount) {
         balance += amount;
         return balance;
