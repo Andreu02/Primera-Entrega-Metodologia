@@ -1,4 +1,5 @@
-package ent1.eja;//Importamos las distintas clases
+package ent1.eja;
+import ent1.eja.e1.Circle1; //Importamos las distintas clases
 import ent1.eja.e2.Circle;
 import ent1.eja.e3.Rectangle;
 import ent1.eja.e4.Employee;
@@ -12,7 +13,26 @@ import ent1.eja.e9.Ball;
 public class Main {
     public static void main(String[] args) {
         // Llamamos a la función de la clase que queramos ejecutar
-        ent1_eja_e2();
+        ent1_eja_e1();
+    }
+
+    //función ejemplo círculo
+    static public void ent1_eja_e1(){
+
+        // creas un círculo con el constructor por defecto, es decir, radio 1.0
+        Circle1 c1 = new Circle1();
+
+        //muestras por pantalla el radio, obtienes el área y lo sacas también por pantalla
+        System.out.println("The circle has radius of "
+                + c1.getRadius() + " and area of " + c1.getArea());
+
+        //creas un nuevo círculo esta vez de radio 2.0
+        Circle1 c2 = new Circle1(2.0);
+
+        //muestras por pantalla el nuevo radio, obtienes el área y lo sacas también por pantalla
+        System.out.println("The circle has radius of "
+                + c2.getRadius() + " and area of " + c2.getArea());
+
     }
 
     // función del círculo
